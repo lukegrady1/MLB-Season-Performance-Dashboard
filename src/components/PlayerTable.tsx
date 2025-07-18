@@ -29,7 +29,7 @@ export default function PlayerTable({ data, onSelectPlayer }: Props) {
     () => [
       {
         Header: 'Player',
-        accessor: row => `Player ${row.player.id}`,
+        accessor: row => row.player.name,
       },
       {
         Header: 'BA',
