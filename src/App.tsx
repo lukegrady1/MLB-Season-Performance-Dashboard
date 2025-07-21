@@ -1,8 +1,9 @@
-// src/App.tsx
+// File: src/App.tsx
+
 import React, { useState } from 'react'
 import usePlayerStats, { PlayerData } from './hooks/usePlayerStats'
 import Loader from './components/Loader'
-import PlayerSelector from './components/PlayerSelector'
+import PlayerSearch from './components/PlayerSearch'
 import PlayerTable from './components/PlayerTable'
 import PlayerTrendChart from './components/PlayerTrendChart'
 
@@ -25,7 +26,7 @@ export default function App() {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Season Performance Dashboard</h1>
-      <PlayerSelector onAdd={handleAdd} />
+      <PlayerSearch onSelect={handleAdd} />
       {data.length > 0 && (
         <>
           <PlayerTable data={data} onSelectPlayer={setSelectedPlayer} />
